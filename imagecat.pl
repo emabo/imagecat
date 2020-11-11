@@ -17,12 +17,14 @@ use Term::ProgressBar;
 
 
 my $parser = DateTime::Format::Strptime->new(pattern => '%Y:%m:%d %H:%M:%S', strict => 1);
-my @parsers = (DateTime::Format::Strptime->new(pattern => 'IMG-%Y%m%d', strict => 1),
-	       DateTime::Format::Strptime->new(pattern => 'PANO_%Y%m%d_%H%M%S', strict => 1),
-	       DateTime::Format::Strptime->new(pattern => 'IMG_%Y%m%d_%H%M%S', strict => 1),
-	       DateTime::Format::Strptime->new(pattern => '%Y%m%d_%H%M%S', strict => 1),
-	       DateTime::Format::Strptime->new(pattern => 'VID-%Y%m%d', strict => 1),
-	       DateTime::Format::Strptime->new(pattern => '%Y%m%d', strict => 1));
+my @parsers = (DateTime::Format::Strptime->new(pattern => 'IMG-%Y%m%d', strict => 1), # IMG-20160807-WA0001.jpg
+	       DateTime::Format::Strptime->new(pattern => 'PANO_%Y%m%d_%H%M%S', strict => 1), # PANO_20190427_115542.jpg
+	       DateTime::Format::Strptime->new(pattern => 'IMG_%Y%m%d_%H%M%S', strict => 1), # IMG_20190426_102645.jpg
+	       DateTime::Format::Strptime->new(pattern => 'IMG_%Y-%m-%d', strict => 1), # IMG_2016-08-16-19343585.png
+	       DateTime::Format::Strptime->new(pattern => '%Y%m%d_%H%M%S', strict => 1), # 20160824_123058.jpg
+	       DateTime::Format::Strptime->new(pattern => 'VID-%Y%m%d', strict => 1), # VID-20200208-WA0000.mp4
+	       DateTime::Format::Strptime->new(pattern => '%Y%m%d', strict => 1), # 20150511-WA0003.jpg
+	       DateTime::Format::Strptime->new(pattern => '%Y-%m-%d %H.%M.%S', strict => 1)); # 2015-06-04 17.30.00.jpg
 
 # options
 my $from_dir;
