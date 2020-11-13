@@ -1,0 +1,14 @@
+NAME
+    imagecat - Sort images and videos in directories using Exif creation date
+
+DESCRIPTION
+    imagecat is a simple tool to sort/organize images in directories using the
+    creation date taken from Exif content.
+
+    When creation date is not available, imagecat tries to guess the date
+    from filename, using an array of known formats.
+
+LICENSE
+    This software is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+

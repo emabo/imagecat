@@ -1,0 +1,10 @@
+== just some unsorted ideas
+
+-treat videos and images separately
+-option to count files and print statistics based on extensions
+-implement globbing option
+-option to verify that files are located in right dir based on creation date
+-check both creation date from Exif and filename
+-option to customize output path
+-option to check only specific extensions
+-save log in a separate file

@@ -210,20 +210,20 @@ __END__
 
 =head1 NAME
 
-imagecat - Organize and distribute photos to directories
+imagecat - Sort images and videos in directories using Exif creation date
 
 =head1 SYNOPSIS
 
-imagecat [options] [file ...]
+imagecat [options] [-from dir] [-to dir]
 
  Options:
    -help            brief help message
    -man             full documentation
    -verbose         increase verbosity
    -from            directory from where to get images
-   -to              directory to catalog images
+   -to              directory where to sort images
    -copy            copy instead of moving images
-   -dry-run         dry run without touching anything
+   -dry-run         dry run without touching any file
    -recursive       recursively visit subdirectories
    -max-depth       visit maximum -max-depth level in recursion
 
@@ -250,7 +250,7 @@ Directory from where to get images.
 
 =item B<-to>
 
-Directory to catalog images.
+Directory where to sort images.
 
 =item B<-copy>
 
@@ -258,7 +258,7 @@ Copy instead of moving images.
 
 =item B<-dry-run>
 
-Dry run without touching anything.
+Dry run without touching any file.
 
 =item B<-recursive>
 
@@ -266,14 +266,15 @@ Recursively visit subdirectories.
 
 =item B<-max-depth>
 
-Visit maximum -max-depth level in recursion. Enable implicitly recursion.
+Visit maximum -max-depth level in recursion. Implicitly enable recursion.
 
 =back
 
 =head1 DESCRIPTION
 
 B<This program> will read all images from -from directory
-and catalog them to -to directory based on creation date.
+and sort them to -to directory using creation date extracted
+from Exif.
 
 =cut
 
